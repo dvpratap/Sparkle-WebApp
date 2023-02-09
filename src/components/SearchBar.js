@@ -43,13 +43,13 @@ const SearchBar =() => {
   return (
     <div >
         <div className="div-style"></div>
-        <div className="error-msg">{searcherrors.msg}</div>
+        <h4 className="error-msg">Enter Jewelry id: </h4>
       <form className="search-style" onSubmit={handleSubmit}>
       <input className="form-control mr-sm-2" type="search" placeholder="Enter Jewelry id..." value={searchInput} aria-label="Search" onChange={handleChange} ></input>
       <button className="btn btn-outline-success" type="submit" >Search</button>
       </form>
+      <h5 className="error-msg">{searcherrors.msg}</h5>
     </div>
-
   );
 }
 
