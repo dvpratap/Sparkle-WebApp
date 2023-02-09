@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import "./SearchBar.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import {useNavigate} from "react-router-dom";
@@ -38,7 +37,7 @@ const SearchBar =() => {
         if(Object.keys(searcherrors).length === 0 && isSubmit){
             console.log(searchInput);
             navigate( '/details',{ state: searchInput});
-        }
+        }// eslint-disable-next-line react-hooks/exhaustive-deps
     },[searcherrors]);
      
   return (
